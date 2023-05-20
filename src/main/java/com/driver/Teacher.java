@@ -1,6 +1,10 @@
 package com.driver;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Teacher {
 
     private String name;
@@ -8,10 +12,6 @@ public class Teacher {
     private int numberOfStudents;
 
     private int age;
-
-    public String getName() {
-        return name;
-    }
 
     public Teacher() {
 

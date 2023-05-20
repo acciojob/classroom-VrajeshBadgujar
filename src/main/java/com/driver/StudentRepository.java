@@ -6,9 +6,9 @@ import java.util.List;
 
 public class StudentRepository {
     private List<Student> studentList =new ArrayList<>();
-    private   List<Teacher> teacherList =new ArrayList<>();
+   private   List<Teacher> teacherList =new ArrayList<>();
 
-    private HashMap<Teacher,List<Student>> teacherWithStudentMap=new HashMap<>();
+   private HashMap<Teacher,List<Student>> teacherWithStudentMap=new HashMap<>();
     public void addStudent(Student student) {
         studentList.add(student);
     }
@@ -19,10 +19,10 @@ public class StudentRepository {
 
     public void addStudentTeacherPair(String student, String teacher) {
         Teacher tempTeacher=getTeacherByName(teacher);
-        Student student1=getStudentByName(student);
-        List<Student> tempList=teacherWithStudentMap.getOrDefault(tempTeacher, new ArrayList<Student>());
-        tempList.add(student1);
-        teacherWithStudentMap.put(tempTeacher,tempList);
+         Student student1=getStudentByName(student);
+         List<Student> tempList=teacherWithStudentMap.getOrDefault(tempTeacher, new ArrayList<Student>());
+         tempList.add(student1);
+      teacherWithStudentMap.put(tempTeacher,tempList);
     }
 
     public Student getStudentByName(String name) {
@@ -46,15 +46,15 @@ public class StudentRepository {
         for(Student student:studentList){
             allStudentByTeacher.add(student.getName());
         }
-        return allStudentByTeacher;
+       return allStudentByTeacher;
     }
 
     public List<String> getAllStudents() {
-        List<String> allStudent=new ArrayList<>();
-        for (Student student:studentList){
-            allStudent.add(student.getName());
-        }
-        return allStudent;
+       List<String> allStudent=new ArrayList<>();
+       for (Student student:studentList){
+           allStudent.add(student.getName());
+       }
+       return allStudent;
     }
 
     public void deleteTeacherByName(String teacher) {
