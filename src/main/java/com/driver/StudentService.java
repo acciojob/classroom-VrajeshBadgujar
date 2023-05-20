@@ -3,7 +3,7 @@ package com.driver;
 import java.util.List;
 
 public class StudentService {
-    Teacher.StudentRepository studentRepository=new Teacher.StudentRepository();
+    StudentRepository studentRepository=new StudentRepository();
     public void addStudent(Student student) {
         studentRepository.addStudent(student);
     }
