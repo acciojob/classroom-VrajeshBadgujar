@@ -6,6 +6,10 @@ public class Student {
     private int age;
     private double averageScore;
 
+    public int getAge() {
+        return age;
+    }
+
     public Student(){
 
     }
